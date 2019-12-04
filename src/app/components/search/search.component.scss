@@ -1,0 +1,30 @@
+.search {
+  position: relative;
+  top: -3rem;
+  width: 60%;
+  margin: auto;
+  text-align: center;
+  border-radius: 12px;
+  background: white;
+  padding: 1.5rem 0;
+  box-shadow: 0 30px 60px -12px rgba(50,50,93,.25), 0 18px 36px -18px rgba(0,0,0,.3), 0 -12px 36px -8px rgba(0,0,0,.025);
+}
+
+.form {
+  display: flex;
+  justify-content: space-around;
+
+  &__input {
+    border: 2px solid #e1e4ea;
+    padding: 0.25rem 1rem;
+    font-size: 1.15rem;
+  }
+
+  &__job {
+    flex-basis: 40%;
+  }
+
+  &__location {
+    flex-basis: 30%;
+  }
+}

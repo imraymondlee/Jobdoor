@@ -1,1 +1,47 @@
-/* You can add global styles to this file, and also import other style files */
+$primaryColor: #367bff;
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+main {
+  margin: 3rem;
+}
+
+p {
+  color: red;
+}
+
+.banner {
+  border-radius: 12px;
+  background-image: linear-gradient(to left, #00c6fb 0%, #005bea 100%);
+  text-align: center;
+  padding: 4rem 0 8rem 0;
+
+  &__title {
+    margin-bottom: 0;
+    font-size: 4rem;
+    color: white;
+  }
+
+  &__subtitle {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    color: white;
+  }
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  background: $primaryColor;
+  padding: 0.75rem 2rem;
+  font-size: 1.1rem;
+  color: white;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: darken($primaryColor, 20%);
+  }
+}
