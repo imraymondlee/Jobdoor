@@ -1,0 +1,45 @@
+.single-posting {
+  margin-bottom: 0.5rem;
+  border-bottom:  1px solid #e1e4ea;
+  padding: 2.5rem 0 3rem 0;
+
+  &__position {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+
+  &__info {
+    display: flex;
+    font-weight: 500;
+    color: #5a5a5d;
+  }
+}
+
+.title {
+  font-size: 1.5rem;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+.view-position {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+}
+
+.company {
+  flex-basis: 10%;
+
+}
+
+.location {
+  flex-basis: 10%;
+}
+
+.date {
+  margin-left: auto;
+}
