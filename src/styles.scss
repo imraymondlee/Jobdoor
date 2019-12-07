@@ -69,3 +69,25 @@ a {
     }
   }
 }
+
+.form {
+  &__field {
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 0.5rem;
+    text-align: left;
+    font-weight: 500;
+    color: #76767d;
+  }
+
+  &__input {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    border: 2px solid #e1e4ea;
+    padding: 0.5rem 1rem;
+    font-size: 1.15rem;
+  }
+}

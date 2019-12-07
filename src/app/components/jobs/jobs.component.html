@@ -1,10 +1,16 @@
 <div class="banner">
   <div class="search-card">
     <h1 class="search-card__heading">Begin Your Search</h1>
-    <form class="form">
-      <input type="text" class="form__input form__job" placeholder="Job" />
-      <input type="text" class="form__input form__location" placeholder="Location" />
-      <button class="button form__button">Search</button>
+    <form class="search__form search-card__form">
+      <div class="form__field search-card__job">
+        <label for="job" class="form__label">Job</label>
+        <input id="job" type="text" class="form__input search__job" />
+      </div>
+      <div class="form__field search-card__location">
+        <label for="location" class="form__label">Location</label>
+        <input id="location" type="text" class="form__input search__location" />
+      </div>
+      <button class="button search-card__button">Search</button>
     </form>
   </div>
 </div>
