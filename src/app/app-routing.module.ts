@@ -2,12 +2,12 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { PostJobComponent } from './components/post-job/post-job.component';
-import { AllJobsComponent } from './components/all-jobs/all-jobs.component';
+import { JobsComponent } from './components/jobs/jobs.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'post-job', component: PostJobComponent },
-  { path: 'all-jobs', component: AllJobsComponent },
+  { path: 'jobs', component: JobsComponent },
   { path: '**', redirectTo: '', pathMatch: 'full' },
 ];
 

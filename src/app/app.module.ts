@@ -10,7 +10,7 @@ import { PostingsComponent } from './components/postings/postings.component';
 import { SinglePostingComponent } from './components/single-posting/single-posting.component';
 import { HomeComponent } from './components/home/home.component';
 import { PostJobComponent } from './components/post-job/post-job.component';
-import { AllJobsComponent } from './components/all-jobs/all-jobs.component';
+import { JobsComponent } from './components/jobs/jobs.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +21,7 @@ import { AllJobsComponent } from './components/all-jobs/all-jobs.component';
     SinglePostingComponent,
     HomeComponent,
     PostJobComponent,
-    AllJobsComponent
+    JobsComponent
   ],
   imports: [
     BrowserModule,
