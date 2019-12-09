@@ -10,7 +10,6 @@ import { PostingsComponent } from './components/postings/postings.component';
 import { SinglePostingComponent } from './components/single-posting/single-posting.component';
 import { HomeComponent } from './components/home/home.component';
 import { PostJobComponent } from './components/post-job/post-job.component';
-import { JobsComponent } from './components/jobs/jobs.component';
 
 @NgModule({
   declarations: [
@@ -20,8 +19,7 @@ import { JobsComponent } from './components/jobs/jobs.component';
     PostingsComponent,
     SinglePostingComponent,
     HomeComponent,
-    PostJobComponent,
-    JobsComponent
+    PostJobComponent
   ],
   imports: [
     BrowserModule,
