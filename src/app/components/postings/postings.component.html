@@ -1,5 +1,5 @@
 <app-single-posting *ngFor="let posting of postings" [singlePosting]="posting"></app-single-posting>
 
-<div class="all-postings">
-  <a routerLink="/all-jobs">View All Postings</a>
+<div class="pagination">
+  <button *ngFor="let page of totalPagesArr" (click)="changePage(page)" class="pagination__button {{page==currentPage ? 'pagination__button--selected' : ''}}">{{page}}</button>
 </div>

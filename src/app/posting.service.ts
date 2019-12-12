@@ -8,11 +8,11 @@ import { Posting } from './models/Posting';
 })
 export class PostingService {
 
-  apiUrl = './assets/mock-jobs.json';
+  apiUrl = 'http://localhost:4000';
 
   constructor(private http: HttpClient) { }
 
-  getPostings(): Observable<Posting[]> {
-    return this.http.get<Posting[]>(this.apiUrl);
+  getPostings(page = 1): Observable<any> {
+    return this.http.get<any>(this.apiUrl + '/posting?page=' + page);
   }
 }

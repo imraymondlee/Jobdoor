@@ -1,6 +1,6 @@
 <div class="single-posting">
   <div class="single-posting__position">
-    <a href="" class="title">{{ singlePosting.title }}</a>
+    <a href="{{singlePosting.url}}" target="_blank" class="title">{{ singlePosting.position }}</a>
     <button class="view-position button button--secondary">View Position</button>
   </div>
   <div class="single-posting__info">
@@ -11,7 +11,7 @@
       {{ singlePosting.location }}
     </div>
     <div class="date">
-      {{ singlePosting.dateposted }}
+      {{ singlePosting.datePosted }}
     </div>
   </div>
 </div>
