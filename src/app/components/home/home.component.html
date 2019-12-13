@@ -3,6 +3,6 @@
   <p class="banner__subtitle">Find your intern and new grad position</p>
 </div>
 <div class="board">
-  <app-search></app-search>
-  <app-postings></app-postings>
+  <app-search (searchPostings)="postings.searchPostings($event)"></app-search>
+  <app-postings #postings></app-postings>
 </div>

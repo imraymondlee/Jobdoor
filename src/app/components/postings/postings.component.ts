@@ -38,4 +38,10 @@ export class PostingsComponent implements OnInit {
       });
   }
 
+  searchPostings(event): void {
+    this.postingService.getPostings(1, event.position, event.location)
+      .subscribe(posts => {
+        this.postings = posts.data;
+      });
+  }
 }
