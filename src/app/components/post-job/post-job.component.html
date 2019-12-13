@@ -1,21 +1,21 @@
 <div class="submission">
   <h1>Post a Job</h1>
-  <form class="form">
+  <form class="form" (ngSubmit)="onSubmit()">
     <div class="form__field submission__field">
       <label for="position" class="form__label">Position</label>
-      <input id="position" type="text" class="form__input" />
+      <input id="position" type="text" name="position" [(ngModel)]="position" class="form__input" />
     </div>
     <div class="form__field submission__field">
       <label for="company" class="form__label">Company</label>
-      <input id="company" type="text" class="form__input" />
+      <input id="company" type="text" name="company" [(ngModel)]="company" class="form__input" />
     </div>
     <div class="form__field submission__field">
       <label for="location" class="form__label">Location</label>
-      <input id="location" type="text" class="form__input" />
+      <input id="location" type="text" name="location" [(ngModel)]="location" class="form__input" />
     </div>
     <div class="form__field submission__field">
-      <label for="link" class="form__label">Link</label>
-      <input id="link" type="text" class="form__input" />
+      <label for="url" class="form__label">Link</label>
+      <input id="url" type="text" name="url" [(ngModel)]="url" class="form__input" />
     </div>
     <button class="button">Post</button>
   </form>

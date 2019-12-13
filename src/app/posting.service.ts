@@ -30,4 +30,8 @@ export class PostingService {
       return this.http.get<any>(this.apiUrl + '/posting?page=' + page);
     }
   }
+
+  postJob(job:object): Observable<any> {
+    return this.http.post<any>(this.apiUrl + '/posting', job);
+  }
 }
