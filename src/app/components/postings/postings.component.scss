@@ -4,14 +4,18 @@
 
   &__button {
     margin: 0.25rem;
-    border: 1px solid black;
-    border-radius: 5px;
-    background: transparent;
-    padding: 0.5rem;
+    height: 35px;
+    width: 35px;
+    border: 1px solid #f5f8fe;
+    border-radius: 50%;
+    background: #f5f8fe;
+    font-weight: 700;
+    color: #868c91;
     cursor: pointer;
 
     &--selected {
-      font-weight: 800;
+      background: #144fad;
+      color: white;
     }
   }
 }
