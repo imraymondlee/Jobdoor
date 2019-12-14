@@ -11,6 +11,8 @@ import { PostingsComponent } from './components/postings/postings.component';
 import { SinglePostingComponent } from './components/single-posting/single-posting.component';
 import { HomeComponent } from './components/home/home.component';
 import { PostJobComponent } from './components/post-job/post-job.component';
+import { RegisterComponent } from './components/register/register.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { PostJobComponent } from './components/post-job/post-job.component';
     PostingsComponent,
     SinglePostingComponent,
     HomeComponent,
-    PostJobComponent
+    PostJobComponent,
+    RegisterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
