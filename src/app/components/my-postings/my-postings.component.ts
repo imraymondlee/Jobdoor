@@ -12,8 +12,6 @@ import { Router } from '@angular/router';
 export class MyPostingsComponent implements OnInit {
   postings:Posting[];
 
-  testResponse:string;
-
   constructor(private postingService: PostingService, private router: Router) { }
 
   ngOnInit() {
@@ -23,8 +21,7 @@ export class MyPostingsComponent implements OnInit {
   getMyPostings(): void {
     this.postingService.getMyPostings()
       .subscribe(posts => {
-        // this.postings = posts.data;
-        this.testResponse = posts.data;
+        this.postings = posts;
       }, err => {
         if(err instanceof HttpErrorResponse) {
           if(err.status === 401) {
