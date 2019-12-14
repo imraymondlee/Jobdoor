@@ -15,6 +15,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 
 import { AuthService } from './auth.service';
+import { MyPostingsComponent } from './components/my-postings/my-postings.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { AuthService } from './auth.service';
     HomeComponent,
     PostJobComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    MyPostingsComponent
   ],
   imports: [
     BrowserModule,
