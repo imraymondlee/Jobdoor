@@ -13,4 +13,9 @@ export class AuthService {
   registerUser(user) {
     return this.http.post<any>(this.apiUrl + '/register', user);
   }
+
+  loginUser(user) {
+    return this.http.post<any>(this.apiUrl + '/login', user);
+  }
+
 }
