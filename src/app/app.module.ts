@@ -14,6 +14,8 @@ import { PostJobComponent } from './components/post-job/post-job.component';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 
+import { AuthService } from './auth.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +34,7 @@ import { LoginComponent } from './components/login/login.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
