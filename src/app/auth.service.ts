@@ -18,4 +18,9 @@ export class AuthService {
     return this.http.post<any>(this.apiUrl + '/login', user);
   }
 
+  loggedIn() {
+    // Returns true/false depending if it exists
+    console.log(!!localStorage.getItem('token'));
+    return !!localStorage.getItem('token');
+  }
 }

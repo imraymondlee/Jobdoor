@@ -13,9 +13,10 @@ import { HomeComponent } from './components/home/home.component';
 import { PostJobComponent } from './components/post-job/post-job.component';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
+import { MyPostingsComponent } from './components/my-postings/my-postings.component';
 
 import { AuthService } from './auth.service';
-import { MyPostingsComponent } from './components/my-postings/my-postings.component';
+import { AuthGuard } from './auth.guard';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,7 @@ import { MyPostingsComponent } from './components/my-postings/my-postings.compon
     HttpClientModule,
     FormsModule
   ],
-  providers: [AuthService],
+  providers: [AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
