@@ -1,8 +1,9 @@
 <header class="menu">
   <a routerLink="/" class="menu__name">Jobdoor</a>
   <nav class="menu__nav">
-    <a routerLink="/register" class="menu__link">Register</a>
-    <a routerLink="/login" class="menu__link">Login</a>
+    <a routerLink="/register" *ngIf="!authService.loggedIn()" class="menu__link">Register</a>
+    <a routerLink="/login" *ngIf="!authService.loggedIn()" class="menu__link">Login</a>
+    <a routerLink="/login" *ngIf="authService.loggedIn()" (click)="authService.logoutUser()" class="menu__link">Logout</a>
     <a routerLink="/post-job" class="menu__link">Post a Job</a>
     <a routerLink="/my-postings" class="menu__link">My Postings</a>
   </nav>
