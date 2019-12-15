@@ -1,17 +1,31 @@
 <div class="single-posting">
-  <div class="single-posting__position">
-    <a href="{{singlePosting.url}}" target="_blank" class="title">{{ singlePosting.position }}</a>
-    <button class="view-position button button--secondary">View Position</button>
-  </div>
-  <div class="single-posting__info">
-    <div class="company">
-      {{ singlePosting.company }}
+  <div class="">
+    <div class="single-posting__position">
+      <a href="{{singlePosting.url}}" target="_blank" class="title">{{ singlePosting.position }}</a>
+
+      <!-- Display on My Postings page instead of View Position button -->
+      <div class="editable" *ngIf="isEditable">
+        <button class="button editable__edit">
+          Edit
+        </button>
+        <button class="button button--warning editable__delete">
+          Delete
+        </button>
+      </div>
+
+
+      <button class="view-position button button--secondary" *ngIf="!isEditable">View Position</button>
     </div>
-    <div class="location">
-      {{ singlePosting.location }}
-    </div>
-    <div class="date">
-      {{ singlePosting.datePosted }}
+    <div class="single-posting__info">
+      <div class="company">
+        {{ singlePosting.company }}
+      </div>
+      <div class="location">
+        {{ singlePosting.location }}
+      </div>
+      <div class="date">
+        {{ singlePosting.datePosted }}
+      </div>
     </div>
   </div>
 </div>

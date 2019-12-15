@@ -1,10 +1,13 @@
 <header class="menu">
   <a routerLink="/" class="menu__name">Jobdoor</a>
   <nav class="menu__nav">
-    <a routerLink="/register" *ngIf="!authService.loggedIn()" class="menu__link">Register</a>
-    <a routerLink="/login" *ngIf="!authService.loggedIn()" class="menu__link">Login</a>
-    <a routerLink="/login" *ngIf="authService.loggedIn()" (click)="authService.logoutUser()" class="menu__link">Logout</a>
-    <a routerLink="/post-job" class="menu__link">Post a Job</a>
-    <a routerLink="/my-postings" class="menu__link">My Postings</a>
+    <!-- Logged Out -->
+    <a routerLink="/register" class="menu__link" *ngIf="!authService.loggedIn()">Register</a>
+    <a routerLink="/login" class="menu__link" *ngIf="!authService.loggedIn()">Login</a>
+
+    <!-- Logged In -->
+    <a routerLink="/post-job" class="menu__link" *ngIf="authService.loggedIn()">Post a Job</a>
+    <a routerLink="/my-postings" class="menu__link" *ngIf="authService.loggedIn()">My Postings</a>
+    <a routerLink="/login" class="menu__link" *ngIf="authService.loggedIn()" (click)="authService.logoutUser()">Logout</a>
   </nav>
 </header>

@@ -8,6 +8,7 @@ import { Posting } from '../../models/Posting';
 })
 export class SinglePostingComponent implements OnInit {
   @Input() singlePosting: Posting;
+  @Input() isEditable: boolean;
 
   constructor() { }
 

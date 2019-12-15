@@ -43,3 +43,21 @@
 .date {
   margin-left: auto;
 }
+
+.editable {
+  display: flex;
+  align-items: flex-start;
+
+  &__edit {
+    margin-right: 0.25rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+
+  &__delete {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+}
