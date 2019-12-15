@@ -35,11 +35,15 @@ export class PostingService {
     return this.http.get<any>(this.apiUrl + '/posting/single/' + id);
   }
 
-  postJob(job:object): Observable<any> {
+  postJob(job: object): Observable<any> {
     return this.http.post<any>(this.apiUrl + '/posting', job);
   }
 
   getMyPostings(): Observable<any> {
     return this.http.get<any>(this.apiUrl + '/posting/my-postings');
+  }
+
+  updatePosting(id: string, data: any): Observable<any> {
+    return this.http.put<any>(this.apiUrl + '/posting/single/' + id, data);
   }
 }
