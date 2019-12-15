@@ -1,0 +1,23 @@
+<div class="submission">
+  <h1>Edit Job: {{posting.position}}</h1>
+  <form class="form" (ngSubmit)="onSubmit()">
+    <div class="form__field submission__field">
+      <label for="position" class="form__label">Position</label>
+      <input id="position" type="text" name="position" [(ngModel)]="position" class="form__input" value={{posting.position}} />
+    </div>
+    <div class="form__field submission__field">
+      <label for="company" class="form__label">Company</label>
+      <input id="company" type="text" name="company" [(ngModel)]="company" class="form__input" value={{posting.company}} />
+    </div>
+    <div class="form__field submission__field">
+      <label for="location" class="form__label">Location</label>
+      <input id="location" type="text" name="location" [(ngModel)]="location" class="form__input" value={{posting.location}} />
+    </div>
+    <div class="form__field submission__field">
+      <label for="url" class="form__label">Link</label>
+      <input id="url" type="text" name="url" [(ngModel)]="url" class="form__input" value={{posting.url}} />
+    </div>
+    <button class="button button--secondary">Cancel</button>
+    <button class="button">Edit</button>
+  </form>
+</div>

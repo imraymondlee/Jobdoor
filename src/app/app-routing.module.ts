@@ -5,6 +5,7 @@ import { PostJobComponent } from './components/post-job/post-job.component';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import { MyPostingsComponent } from './components/my-postings/my-postings.component';
+import { EditJobComponent } from './components/edit-job/edit-job.component';
 import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
   { path: 'my-postings', component: MyPostingsComponent, canActivate: [AuthGuard] },
+  { path: 'edit-job/:id', component: EditJobComponent, canActivate: [AuthGuard] },
   { path: '**', redirectTo: '', pathMatch: 'full' },
 ];
 

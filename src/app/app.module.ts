@@ -18,6 +18,7 @@ import { MyPostingsComponent } from './components/my-postings/my-postings.compon
 import { AuthService } from './auth.service';
 import { AuthGuard } from './auth.guard';
 import { TokenInterceptorService } from './token-interceptor.service';
+import { EditJobComponent } from './components/edit-job/edit-job.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { TokenInterceptorService } from './token-interceptor.service';
     PostJobComponent,
     RegisterComponent,
     LoginComponent,
-    MyPostingsComponent
+    MyPostingsComponent,
+    EditJobComponent
   ],
   imports: [
     BrowserModule,
