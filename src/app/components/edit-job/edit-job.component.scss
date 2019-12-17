@@ -9,4 +9,17 @@
   &__field {
     margin: 1rem 0;
   }
+
+  &__buttons {
+    display: flex;
+    margin-top: 2rem;
+  }
+
+  &__single-button {
+    margin-right: 1rem;
+  }
+
+  &__right-button {
+    margin-left: auto;
+  }
 }

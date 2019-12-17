@@ -46,4 +46,8 @@ export class PostingService {
   updatePosting(id: string, data: any): Observable<any> {
     return this.http.put<any>(this.apiUrl + '/posting/single/' + id, data);
   }
+
+  deletePosting(id: string): Observable<any> {
+    return this.http.delete<any>(this.apiUrl + '/posting/' + id);
+  }
 }

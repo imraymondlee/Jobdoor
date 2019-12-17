@@ -2,16 +2,10 @@
   <div class="">
     <div class="single-posting__position">
       <a href="{{singlePosting.url}}" target="_blank" class="title">{{ singlePosting.position }}</a>
-
       <!-- Display on My Postings page instead of View Position button -->
-      <div class="editable" *ngIf="isEditable">
-        <button class="button editable__edit">
-          Edit
-        </button>
-        <button class="button button--warning editable__delete">
-          Delete
-        </button>
-      </div>
+      <a routerLink="/edit-job/{{singlePosting._id}}" class="button single-posting__edit" *ngIf="isEditable">
+        Edit
+      </a>
 
       <button class="view-position button button--secondary" *ngIf="!isEditable">View Position</button>
     </div>

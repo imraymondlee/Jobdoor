@@ -66,4 +66,16 @@ export class EditJobComponent implements OnInit {
       });
   }
 
+  onCancel() {
+    // return to My Postings
+    this.router.navigate(['/my-postings']);
+  }
+
+  onDelete() {
+    this.postingService.deletePosting(this.id)
+      .subscribe(res => {
+        console.log(res);
+      });
+  }
+
 }
