@@ -1,0 +1,11 @@
+<h1 mat-dialog-title>{{title}}</h1>
+
+<mat-dialog-content >
+  {{body}} 
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button type="button" class="button button--secondary submission__single-button" (click)="cancel()">Cancel</button>
+  <!-- <button class="button submission__single-button" (click)="save()">Ok</button> -->
+  <button type="button" class="button button--warning submission__right-button" (click)="accept()">Delete</button>
+</mat-dialog-actions>

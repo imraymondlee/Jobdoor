@@ -21,6 +21,8 @@ import { TokenInterceptorService } from './token-interceptor.service';
 import { EditJobComponent } from './components/edit-job/edit-job.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import {MatIconModule} from '@angular/material/icon';
+import {MatDialogModule} from '@angular/material';
+import { DialogComponent } from './components/dialog/dialog.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,8 @@ import {MatIconModule} from '@angular/material/icon';
     RegisterComponent,
     LoginComponent,
     MyPostingsComponent,
-    EditJobComponent
+    EditJobComponent,
+    DialogComponent
   ],
   imports: [
     BrowserModule,
@@ -42,13 +45,15 @@ import {MatIconModule} from '@angular/material/icon';
     HttpClientModule,
     FormsModule,
     NoopAnimationsModule,
-    MatIconModule
+    MatIconModule,
+    MatDialogModule
   ],
   providers: [AuthService, AuthGuard, {
     provide: HTTP_INTERCEPTORS,
     useClass: TokenInterceptorService,
     multi: true
   }],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [DialogComponent]
 })
 export class AppModule { }

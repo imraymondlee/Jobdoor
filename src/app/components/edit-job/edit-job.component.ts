@@ -3,6 +3,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { PostingService } from '../../posting.service';
 import { HttpErrorResponse } from '@angular/common/http';
 import { DatePipe } from '@angular/common';
+import {MatDialog, MatDialogConfig} from '@angular/material';
+import { DialogComponent } from '../dialog/dialog.component';
 
 @Component({
   selector: 'app-edit-job',
@@ -20,7 +22,7 @@ export class EditJobComponent implements OnInit {
   date:string;
 
 
-  constructor(private route: ActivatedRoute, private router: Router, private postingService: PostingService, private datePipe: DatePipe) { }
+  constructor(private route: ActivatedRoute, private router: Router, private postingService: PostingService, private datePipe: DatePipe, private matDialog: MatDialog) { }
 
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
@@ -71,10 +73,30 @@ export class EditJobComponent implements OnInit {
     this.router.navigate(['/my-postings']);
   }
 
+
   onDelete() {
-    this.postingService.deletePosting(this.id)
-      .subscribe(res => {
-        console.log(res);
+    const dialogConfig = new MatDialogConfig();
+
+    dialogConfig.panelClass = "dialog";
+    dialogConfig.disableClose = true;
+    dialogConfig.autoFocus = true;
+
+    dialogConfig.data = {
+      title: 'Delete',
+      body: 'Are you sure you want to delete this posting?'
+    };
+
+    const dialogRef = this.matDialog.open(DialogComponent, dialogConfig);
+
+    dialogRef.afterClosed()
+      .subscribe(data => {
+        // Delete if response from dialog is accepted
+        if(data) {
+          this.postingService.deletePosting(this.id)
+            .subscribe(res => {
+              this.router.navigate(['/my-postings']);
+            });
+        }
       });
   }
 
