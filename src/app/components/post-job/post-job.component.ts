@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DatePipe } from '@angular/common';
+import { Router } from '@angular/router'; 
 import { PostingService } from '../../posting.service';
 
 @Component({
@@ -15,7 +16,7 @@ export class PostJobComponent implements OnInit {
   url:string;
   date:string;
 
-  constructor(private postingService: PostingService, private datePipe: DatePipe) { }
+  constructor(private postingService: PostingService, private datePipe: DatePipe, private router: Router) { }
 
   ngOnInit() {
   }
@@ -33,7 +34,7 @@ export class PostJobComponent implements OnInit {
 
     this.postingService.postJob(job)
       .subscribe(res => {
-        console.log(res);
+        this.router.navigate(['/my-postings']);
       });
   }
 

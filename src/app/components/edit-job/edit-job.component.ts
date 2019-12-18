@@ -64,7 +64,7 @@ export class EditJobComponent implements OnInit {
 
     this.postingService.updatePosting(this.id, job)
       .subscribe(res => {
-        console.log(res);
+        this.router.navigate(['/my-postings']);
       });
   }
 
