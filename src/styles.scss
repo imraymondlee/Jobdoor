@@ -117,14 +117,16 @@ a {
 
 .form {
   &__field {
+    margin: 2rem 0;
   }
 
   &__label {
     display: block;
     margin-bottom: 0.5rem;
     text-align: left;
-    font-weight: 500;
     color: #76767d;
+    font-weight: 500;
+    font-size: 1.125rem;
   }
 
   &__input {
@@ -134,5 +136,17 @@ a {
     border: 2px solid #e1e4ea;
     padding: 0.5rem 1rem;
     font-size: 1.15rem;
+  }
+}
+
+.icon {
+  vertical-align: bottom;
+  color: #9dabbb;
+
+  &--small {
+    // Override Material Design's default
+    height: 20px !important;
+    width: 20px !important;
+    font-size: 20px;
   }
 }

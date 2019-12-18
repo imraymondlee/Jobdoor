@@ -1,12 +1,18 @@
 <div class="login">
   <h1>Login</h1>
   <form class="form">
-    <div class="form__field login__field">
-      <label for="email" class="form__label">Email</label>
+    <div class="form__field">
+      <label for="email" class="form__label">
+        <mat-icon aria-hidden="true" class="icon">email</mat-icon>
+        Email
+      </label>
       <input id="email" type="email" name="email" [(ngModel)]="loginUserData.email" class="form__input" required />
     </div>
-    <div class="form__field login__field">
-      <label for="password" class="form__label">Password</label>
+    <div class="form__field">
+      <label for="password" class="form__label">
+        <mat-icon aria-hidden="true" class="icon">lock</mat-icon>
+        Password
+      </label>
       <input id="password" type="password" name="password" [(ngModel)]="loginUserData.password" class="form__input" required />
     </div>
     <button type="button" class="button" (click)="loginUser()">Login</button>

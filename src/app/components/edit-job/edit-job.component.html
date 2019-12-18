@@ -1,20 +1,32 @@
 <div class="submission">
   <h1>Edit Job: {{posting.position}}</h1>
   <form class="form" (ngSubmit)="onSubmit()">
-    <div class="form__field submission__field">
-      <label for="position" class="form__label">Position</label>
+    <div class="form__field">
+      <label for="position" class="form__label">
+        <mat-icon aria-hidden="true" class="icon">work</mat-icon>
+        Position
+      </label>
       <input id="position" type="text" name="position" [(ngModel)]="position" class="form__input" />
     </div>
-    <div class="form__field submission__field">
-      <label for="company" class="form__label">Company</label>
+    <div class="form__field">
+      <label for="company" class="form__label">
+        <mat-icon aria-hidden="true" class="icon">location_city</mat-icon>
+        Company
+      </label>
       <input id="company" type="text" name="company" [(ngModel)]="company" class="form__input" />
     </div>
-    <div class="form__field submission__field">
-      <label for="location" class="form__label">Location</label>
+    <div class="form__field">
+      <label for="location" class="form__label">
+        <mat-icon aria-hidden="true" class="icon">near_me</mat-icon>
+        Location
+      </label>
       <input id="location" type="text" name="location" [(ngModel)]="location" class="form__input" />
     </div>
-    <div class="form__field submission__field">
-      <label for="url" class="form__label">Link</label>
+    <div class="form__field">
+      <label for="url" class="form__label">
+        <mat-icon aria-hidden="true" class="icon">link</mat-icon>
+        Link
+      </label>
       <input id="url" type="text" name="url" [(ngModel)]="url" class="form__input" />
     </div>
     <div class="submission__buttons">

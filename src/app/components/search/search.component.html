@@ -1,11 +1,17 @@
 <div class="search">
   <form class="search__form form" (ngSubmit)="onSubmit()">
-    <div class="form__field search__job">
-      <label for="position" class="form__label">Position</label>
+    <div class="search__job">
+      <label for="position" class="form__label">
+        <mat-icon aria-hidden="true" class="icon">work</mat-icon>
+        Position
+      </label>
       <input id="position" type="text" name="position" [(ngModel)]="position" class="form__input search__job" />
     </div>
-    <div class="form__field search__location">
-      <label for="location" class="form__label">Location</label>
+    <div class="search__location">
+      <label for="location" class="form__label">
+        <mat-icon aria-hidden="true" class="icon">near_me</mat-icon>
+        Location
+      </label>
       <input id="location" type="text" name="location" [(ngModel)]="location" class="form__input search__location" />
     </div>
     <button class="button search__button">Search</button>
