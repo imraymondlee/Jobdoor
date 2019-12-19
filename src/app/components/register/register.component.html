@@ -6,14 +6,22 @@
         <mat-icon aria-hidden="true" class="icon">email</mat-icon>
         Email
       </label>
-      <input id="email" type="email" name="email" [(ngModel)]="registerUserData.email" class="form__input" required />
+      <input id="email" type="email" name="email" [(ngModel)]="email" class="form__input" required />
     </div>
     <div class="form__field">
       <label for="password" class="form__label">
         <mat-icon aria-hidden="true" class="icon">lock</mat-icon>
         Password
       </label>
-      <input id="password" type="password" name="password" [(ngModel)]="registerUserData.password" class="form__input" required />
+      <input id="password" type="password" name="password" [(ngModel)]="password" class="form__input" required />
+    </div>
+    <div class="form__field">
+      <label for="confirmPassword" class="form__label">
+        <mat-icon aria-hidden="true" class="icon">lock</mat-icon>
+        Confirm Password
+      </label>
+      <input id="confirmPassword" type="password" name="confirmPassword" [(ngModel)]="confirmPassword" (input)="comparePassword()" class="form__input" required />
+      <div *ngIf="!passwordMatch" class="form__warning">Passwords do not match.</div>
     </div>
     <button type="button" class="button" (click)="registerUser()">Register</button>
   </form>
