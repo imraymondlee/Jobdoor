@@ -1,6 +1,4 @@
-<div class="banner">
-  <h1 class="banner__title">My Postings</h1>
-</div>
+<app-banner title="My Postings"></app-banner>
 <div class="board">
   <app-single-posting *ngFor="let posting of postings" [singlePosting]="posting" [isEditable]="true" ></app-single-posting>
 </div>

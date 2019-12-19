@@ -1,4 +1,4 @@
-<div class="login">
+<div class="card">
   <h1>Login</h1>
   <form class="form">
     <div class="form__field">
@@ -15,6 +15,8 @@
       </label>
       <input id="password" type="password" name="password" [(ngModel)]="loginUserData.password" class="form__input" required />
     </div>
-    <button type="button" class="button" (click)="loginUser()">Login</button>
+    <div class="card__buttons">
+      <button type="button" class="button card__single-button" (click)="loginUser()">Login</button>
+    </div>
   </form>
 </div>

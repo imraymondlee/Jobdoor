@@ -1,4 +1,4 @@
-<div class="submission">
+<div class="card">
   <h1>Edit Job: {{posting.position}}</h1>
   <form class="form" (ngSubmit)="onSubmit()">
     <div class="form__field">
@@ -29,10 +29,10 @@
       </label>
       <input id="url" type="text" name="url" [(ngModel)]="url" class="form__input" />
     </div>
-    <div class="submission__buttons">
-      <button type="button" class="button button--secondary submission__single-button" (click)="onCancel()">Cancel</button>
-      <button class="button submission__single-button">Update</button>
-      <button type="button" class="button button--warning submission__right-button" (click)="onDelete()">Delete</button>
+    <div class="card__buttons">
+      <button type="button" class="button button--secondary card__single-button" (click)="onCancel()">Cancel</button>
+      <button class="button card__single-button">Update</button>
+      <button type="button" class="button button--warning card__right-button" (click)="onDelete()">Delete</button>
     </div>
   </form>
 </div>

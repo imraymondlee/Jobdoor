@@ -25,11 +25,14 @@ $job-board-theme: mat-light-theme($job-board-primary, $job-board-accent, $job-bo
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @include angular-material-theme($job-board-theme);
-html, body { height: 100%; }
+html, body { 
+  height: 100%;
+  margin: 0;
+}
 
-$primaryColor: #367bff;
-$bodyColor: #484848;
-$warningColor: #e01d1d;
+
+//===== Jobdoor Styling =====
+@import 'variables.scss';
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -37,7 +40,12 @@ body {
 }
 
 main {
-  margin: 2rem 3rem;
+  margin: 2rem 0;
+}
+@media(min-width: $smallBreakpoint) {
+  main {
+    margin: 2rem 3rem;
+  }
 }
 
 a {
@@ -49,28 +57,24 @@ a {
   }
 }
 
-.banner {
-  border-radius: 12px;
-  background-image: linear-gradient(to left, #00c6fb 0%, #005bea 100%);
-  text-align: center;
-  padding: 4rem 0 8rem 0;
-
-  &__title {
-    margin-bottom: 0;
-    font-size: 4rem;
-    color: white;
-  }
-
-  &__subtitle {
-    margin-top: 1rem;
-    font-size: 1.5rem;
-    color: white;
+.board {
+  width: 95%;
+  margin: auto;
+}
+@media(min-width: $smallBreakpoint) {
+  .board {
+    width: 90%;
   }
 }
-
-.board {
-  width: 65%;
-  margin: auto;
+@media(min-width: $mediumBreakpoint) {
+  .board {
+    width: 80%;
+  }
+}
+@media(min-width: $largeBreakpoint) {
+  .board {
+    width: 65%;
+  }
 }
 
 .button {
@@ -142,6 +146,53 @@ a {
     color: red;
   }
 }
+
+.card {
+  box-sizing: border-box;
+  margin: auto;
+  width: 100%;
+  border-radius: 12px;
+  background: white;
+  padding: 4rem;
+  box-shadow: 0 30px 60px -12px rgba(50,50,93,.25), 0 18px 36px -18px rgba(0,0,0,.3), 0 -12px 36px -8px rgba(0,0,0,.025);
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+  }
+
+  &__single-button {
+    margin: 0.25rem 0;
+  }
+
+  &__right-button {
+    margin: 0.25rem 0;
+  }
+}
+@media(min-width: $smallBreakpoint) {
+  .card {
+    width: 90%;
+
+    &__buttons {
+      flex-direction: row;
+    }
+
+    &__single-button {
+      margin: 0 1rem 0 0;
+    }
+
+    &__right-button {
+      margin: 0 0 0 auto;
+    }
+  }
+}
+@media(min-width: $mediumBreakpoint) {
+  .card {
+    width: 50%;
+  }    
+}
+
 
 .icon {
   vertical-align: bottom;

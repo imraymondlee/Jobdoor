@@ -1,3 +1,5 @@
+@import '../../../variables.scss';
+
 .single-posting {
   margin-bottom: 0.5rem;
   border-bottom:  1px solid #e1e4ea;
@@ -5,20 +7,35 @@
 
   &__position {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 1rem;
+    flex-direction: column;
   }
 
   &__info {
     display: flex;
+    flex-wrap: wrap;
+    margin-top: 1rem;
     font-weight: 500;
     color: #76767d;
   }
 
   &__edit {
+    align-self: flex-start;
+    margin-top: 0.5rem;
     padding: 0.5rem 1rem;
     font-size: 0.9rem;
     font-weight: 600;
+  }
+}
+@media(min-width: $smallBreakpoint) {
+  .single-posting {
+    &__position {
+      justify-content: space-between;
+      flex-direction: row;
+    }
+
+    &__edit {
+      margin-top: 0;
+    }
   }
 }
 
@@ -33,37 +50,65 @@
 }
 
 .view-position {
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
+  display: none;
+}
+@media(min-width: $smallBreakpoint) {
+  .view-position {
+    display: block;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
 }
 
 .company {
-  flex-basis: 13%;
-
+  flex-basis: 100%;
+  margin: 0.25rem 0;
+}
+@media(min-width: $smallBreakpoint) {
+  .company {
+    flex-basis: 25%;
+    margin: 0;
+  }
+}
+@media(min-width: $mediumBreakpoint) {
+  .company {
+    flex-basis: 20%;
+  }
+}
+@media(min-width: $largeBreakpoint) {
+  .company {
+    flex-basis: 15%;
+  }
 }
 
 .location {
-  flex-basis: 13%;
+  flex-basis: 100%;
+  margin: 0.25rem 0;
+}
+@media(min-width: $smallBreakpoint) {
+  .location {
+    flex-basis: 25%;
+    margin: 0;
+  }
+}
+@media(min-width: $mediumBreakpoint) {
+  .location {
+    flex-basis: 20%;
+  }
+}
+@media(min-width: $largeBreakpoint) {
+  .location {
+    flex-basis: 15%;
+  }
 }
 
 .date {
-  margin-left: auto;
+  flex-basis: 100%;
+  margin: 0.25rem 0;
 }
-
-.editable {
-  display: flex;
-  align-items: flex-start;
-
-  &__edit {
-    margin-right: 0.25rem;
-    padding: 0.5rem 1rem;
-    font-size: 0.9rem;
-    font-weight: 600;
-  }
-
-  &__delete {
-    padding: 0.5rem 1rem;
-    font-size: 0.9rem;
-    font-weight: 600;
+@media(min-width: $smallBreakpoint) {
+  .date {
+    flex-basis: auto;
+    margin: 0 0 0 auto;
   }
 }

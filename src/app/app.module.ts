@@ -23,6 +23,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import {MatIconModule} from '@angular/material/icon';
 import {MatDialogModule} from '@angular/material';
 import { DialogComponent } from './components/dialog/dialog.component';
+import { BannerComponent } from './components/banner/banner.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { DialogComponent } from './components/dialog/dialog.component';
     LoginComponent,
     MyPostingsComponent,
     EditJobComponent,
-    DialogComponent
+    DialogComponent,
+    BannerComponent
   ],
   imports: [
     BrowserModule,
