@@ -1,0 +1,3 @@
+[submodule "jobdoor-server"]
+	path = jobdoor-server
+	url = https://github.com/imraymondlee/jobdoor-server.git
