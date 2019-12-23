@@ -24,7 +24,7 @@ export class PostJobComponent implements OnInit {
   onSubmit() {
     this.date = this.datePipe.transform(new Date(), 'LLL. d, yyyy');
 
-    let job = {
+    let posting = {
       'position': this.position,
       'company': this.company,
       'location': this.location,
@@ -32,7 +32,7 @@ export class PostJobComponent implements OnInit {
       'datePosted': this.date
     };
 
-    this.postingService.postJob(job)
+    this.postingService.createPosting(posting)
       .subscribe(res => {
         this.router.navigate(['/my-postings']);
       });

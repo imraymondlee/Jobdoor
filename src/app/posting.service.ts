@@ -35,16 +35,16 @@ export class PostingService {
     return this.http.get<any>(this.apiUrl + '/posting/single/' + id);
   }
 
-  postJob(job: object): Observable<any> {
-    return this.http.post<any>(this.apiUrl + '/posting', job);
+  createPosting(posting: object): Observable<any> {
+    return this.http.post<any>(this.apiUrl + '/posting', posting);
   }
 
   getMyPostings(): Observable<any> {
     return this.http.get<any>(this.apiUrl + '/posting/my-postings');
   }
 
-  updatePosting(id: string, data: any): Observable<any> {
-    return this.http.put<any>(this.apiUrl + '/posting/single/' + id, data);
+  updatePosting(id: string, updatedPosting: any): Observable<any> {
+    return this.http.put<any>(this.apiUrl + '/posting/single/' + id, updatedPosting);
   }
 
   deletePosting(id: string): Observable<any> {

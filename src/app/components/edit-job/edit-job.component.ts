@@ -54,7 +54,7 @@ export class EditJobComponent implements OnInit {
 
   onSubmit() {
     this.date = this.datePipe.transform(new Date(), 'LLL. d, yyyy');
-    let job = {
+    let updatedPosting = {
       'position': this.position,
       'company': this.company,
       'location': this.location,
@@ -62,7 +62,7 @@ export class EditJobComponent implements OnInit {
       'datePosted': this.date
     };
 
-    this.postingService.updatePosting(this.id, job)
+    this.postingService.updatePosting(this.id, updatedPosting)
       .subscribe(res => {
         this.router.navigate(['/my-postings']);
       });

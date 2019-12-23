@@ -13,7 +13,7 @@
     flex-direction: column;
   }
 
-  &__job {
+  &__position {
     margin: 0.25rem 0;
   }
 
@@ -29,7 +29,7 @@
       justify-content: space-between;
     }
 
-    &__job {
+    &__position {
       flex-basis: 40%;
       margin: 0;
     }
