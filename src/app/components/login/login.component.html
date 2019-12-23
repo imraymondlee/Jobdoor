@@ -6,14 +6,14 @@
         <mat-icon aria-hidden="true" class="icon">email</mat-icon>
         Email
       </label>
-      <input id="email" type="email" name="email" [(ngModel)]="loginUserData.email" class="form__input" required />
+      <input id="email" type="email" name="email" [(ngModel)]="email" class="form__input" required />
     </div>
     <div class="form__field">
       <label for="password" class="form__label">
         <mat-icon aria-hidden="true" class="icon">lock</mat-icon>
         Password
       </label>
-      <input id="password" type="password" name="password" [(ngModel)]="loginUserData.password" class="form__input" required />
+      <input id="password" type="password" name="password" [(ngModel)]="password" class="form__input" required />
     </div>
     <div class="card__buttons">
       <button type="button" class="button card__single-button" (click)="loginUser()">Login</button>

@@ -1,8 +1,8 @@
 export class Posting {
-  id: number;
-  title: string;
+  _id: number;
+  position: string;
   company: string;
   location: string;
-  dateposted: string;
+  datePosted: string;
   url: string;
 }

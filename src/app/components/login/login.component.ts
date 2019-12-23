@@ -8,16 +8,21 @@ import { AuthService } from '../../auth.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-
-  loginUserData = {};
-
+  email: string;
+  password: string;
+  
   constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit() {
   }
 
   loginUser() {
-    this.authService.loginUser(this.loginUserData)
+    let loginUserData = {
+      email: this.email,
+      password: this.password
+    };
+
+    this.authService.loginUser(loginUserData)
       .subscribe((res) => {
         localStorage.setItem('token', res.token);
         this.router.navigate(['/']);

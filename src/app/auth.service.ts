@@ -2,22 +2,23 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
+import { environment } from '../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  apiUrl = 'http://localhost:4000/user';
+  apiUrl = environment.API_URL;
 
   constructor(private http: HttpClient, private router: Router) { }
 
   registerUser(user): Observable<any> {
-    return this.http.post<any>(this.apiUrl + '/register', user);
+    return this.http.post<any>(this.apiUrl + '/user/register', user);
   }
 
   loginUser(user): Observable<any> {
-    return this.http.post<any>(this.apiUrl + '/login', user);
+    return this.http.post<any>(this.apiUrl + '/user/login', user);
   }
 
   loggedIn() {
