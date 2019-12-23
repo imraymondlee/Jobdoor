@@ -27,7 +27,6 @@ export class RegisterComponent implements OnInit {
     if(this.passwordMatch) {
       this.authService.registerUser(registerUserData)
         .subscribe((res) => {
-          console.log(res);
           localStorage.setItem('token', res.token);
           this.router.navigate(['/']);
         }, (err) => {

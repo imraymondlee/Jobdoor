@@ -26,7 +26,6 @@ export class EditJobComponent implements OnInit {
 
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
-      console.log(params.get('id'));
       this.id = params.get('id');
     });
 

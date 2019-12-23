@@ -20,9 +20,7 @@ export class SearchComponent implements OnInit {
       position: this.position,
       location: this.location
     };
-    console.log(search);
     this.searchPostings.emit(search);
-
   }
 
 }
