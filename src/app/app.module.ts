@@ -24,6 +24,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatDialogModule} from '@angular/material';
 import { DialogComponent } from './components/dialog/dialog.component';
 import { BannerComponent } from './components/banner/banner.component';
+import { LoadingComponent } from './components/loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { BannerComponent } from './components/banner/banner.component';
     MyPostingsComponent,
     EditJobComponent,
     DialogComponent,
-    BannerComponent
+    BannerComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,
